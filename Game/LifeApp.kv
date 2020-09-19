@@ -1,0 +1,22 @@
+<Window>:
+    canvas.before:
+        Color:
+            rgba: 0.05, 0.05, 0.05, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+
+    # contains all cells
+    GridLayout:
+        cols: self.width/5
+        rows: self.height/5
+
+    # Start/Stop Button
+    FloatLayout:
+        Button:
+            text: root.button_text
+            size_hint: None, None
+            size: self.texture_size[0] + 20, self.texture_size[1]
+            font_size: 25
+            pos: self.parent.width - self.width - 20, self.parent.height - self.height - 20
